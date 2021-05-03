@@ -19,6 +19,18 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">Home</a>
+
+            <div class="nav-item dropdown">
+                <button class="btn btn-secondary mx-3 dropdown-toggle" id="addDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon i-plus"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="addDropdown">
+                    <a class="dropdown-item" href="add_word.html"><i class="icon i-text"></i> 言葉</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="add_category.html"><i class="icon i-folder"></i> カテゴリ</a>
+                </div>
+            </div>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,37 +38,28 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categories
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item text-sm" href="categories.html"><i class="icon i-arrow-right"></i>
-                                カテゴリ一覧</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="add_category.html">＋ 追加</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="category.html">挨拶</a>
-                            <a class="dropdown-item" href="category.html">紹介</a>
-                            <a class="dropdown-item" href="category.html">電話をかける</a>
-                            <a class="dropdown-item" href="category.html">メールで連絡</a>
-                        </div>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
                     </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Profile</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
                     </li>
 
                     <!-- test page -->
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="login.html">login(test)</a>
                     </li>
 
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <!-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
+                </form> -->
+                <form id="navSearch" class="form-inline search-form">
+                    <input type="text" placeholder="Search">
+                    <button type="button"><i class="icon i-search"></i></button>
                 </form>
             </div>
         </div>
